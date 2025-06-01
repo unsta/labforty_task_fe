@@ -1,5 +1,33 @@
-# Vue 3 + Vite
+# Booking API FE
+### *Vue 3 + Vite + TailwindCSS + Axios + SweetAlert2*
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Requirements:
+- First you need to set up the Laravel API https://github.com/unsta/labforty_task_api
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Project Set Up:
+
+### Clone the project
+
+    git clone git@github.com:unsta/labforty_task_fe.git
+
+### From the project directory run
+
+    npm install
+
+### Run local development server
+
+    npm run dev
+
+Usually the local address will be http://localhost:5173/ (The port might be different)
+
+If the port is NOT in the range of :5170-:5185, then you need to check the configurations in the Laravel API: `config/sanctum.php` and `config/cors.php`
+
+## Users:
+- john.doe@labforty.com | password | Role: User
+- jane.doe@labforty.com | password456 | Role: User
+- bob.bobber@labforty.com | password123 | Role: Admin
+
+Note: The `role:user` can list/update/view/delete own bookings only!
+
+Note: The `role:admin` can only list and view all bookings! (the list endpoint has extended filters) 
+
